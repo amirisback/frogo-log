@@ -1,6 +1,7 @@
 ![ScreenShoot Apps](docs/image/ss_banner.png?raw=true)
 
 # About This Project
+[![JitPack](https://jitpack.io/v/amirisback/frogo-log.svg?style=flat-square)](https://jitpack.io/#amirisback/frogo-log)
 SDK for your Log problem to make easier developing android apps
 frogo-log is under huge large development
 
