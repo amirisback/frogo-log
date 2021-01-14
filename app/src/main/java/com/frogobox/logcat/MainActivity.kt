@@ -9,6 +9,7 @@ import com.frogobox.logcat.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
@@ -18,8 +19,12 @@ class MainActivity : AppCompatActivity() {
 
             btnLog.setOnClickListener {
 
-                FrogoLog.d()
                 FrogoLog.d("Debug")
+                FrogoLog.i("Info")
+                FrogoLog.v("Verbose")
+                FrogoLog.w("Warn")
+                FrogoLog.e("Error")
+                FrogoLog.d()
 
             }
 
