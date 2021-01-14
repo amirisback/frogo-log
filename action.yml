@@ -1,7 +1,9 @@
 name: 'Frogo-Log'
 description: 'SDK for your Log problem to make easier developing android apps'
 author: 'Muhammad Faisal Amir'
-icon: archive
+branding:
+  icon: 'archive'
+  color: 'green'
 inputs:
   myInput:
     description: 'Input to use'
