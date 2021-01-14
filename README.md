@@ -10,11 +10,11 @@ frogo-log is under huge large development
 # Version Release
 This Is Latest Release
 
-    $version_release = development
+    $version_release = 1.0.0
 
 What's New??
 
-    * Development *
+    * New Release *
 
 # Download this project
 
@@ -33,7 +33,7 @@ What's New??
 
     dependencies {
             // library frogo-log
-            implementation 'com.github.amirisback:frogo-log:development'
+            implementation 'com.github.amirisback:frogo-log:1.0.0'
 
 ### Step 3. Add the method of Frogo-Log
 
