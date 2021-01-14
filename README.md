@@ -4,6 +4,9 @@
 SDK for your Log problem to make easier developing android apps
 frogo-log is under huge large development
 
+# Screenshoot Library Sample
+![ScreenShoot Apps](docs/image/ss_result_2.png?raw=true)
+
 # Version Release
 This Is Latest Release
 
@@ -30,8 +33,59 @@ What's New??
 
     dependencies {
             // library frogo-log
-            implementation "Coming Soon"
-    }
+            implementation 'com.github.amirisback:frogo-log:development'
+
+### Step 3. Add the method of Frogo-Log
+
+    // Function Log Debug
+    FrogoLog.d("Debug")
+
+    // Function Log Info
+    FrogoLog.i("Info")
+
+    // Function Log Verbose
+    FrogoLog.v("Verbose")
+
+    // Function Log Warn
+    FrogoLog.w("Warn")
+
+    // Function Log Error
+    FrogoLog.e("Error")
+
+    // Function Log Simple Debug without message params
+    FrogoLog.d()
+
+### Result
+![ScreenShoot Apps](docs/image/ss_result_2.png?raw=true)
+
+### List method of Frogo-Log Lib
+
+    // Function Log Simple Debug without message params
+    fun d()
+
+    // Function Log Debug
+    fun d(msg: String?)
+
+    // Function Log Verbose
+    fun v(msg: String?)
+
+    // Function Log Info
+    fun i(msg: String?)
+
+    // Function Log Warn
+    fun w(msg: String?)
+
+    // Function Log Warn
+    fun w(e: Throwable?)
+
+    // Function Log Warn
+    fun w(e: Exception?)
+
+    // Function Log Error
+    fun e(msg: String?)
+
+### Sample code
+For sample code you can see at [This](https://github.com/amirisback/frogo-log/blob/master/app/src/main/java/com/frogobox/logcat/MainActivity.kt)
 
 # Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
