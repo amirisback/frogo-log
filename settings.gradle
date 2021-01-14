@@ -1,2 +1,3 @@
+include ':frogolog'
 include ':app'
 rootProject.name = "LogCat"
