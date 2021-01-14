@@ -14,49 +14,61 @@ import android.util.Log
  * All rights reserved
  *
  */
-object FrogoLog {
+object FrogoLog : IFrogoLog {
 
+    // Constant Variable Simple Message
+    const val SIMPLE_MESSSAGE = "SIMPLE DEBUG FOR MARK LINE OF CODE"
+
+    // Tag for get class name this function
     private fun tag() : String {
         return this.javaClass.simpleName
     }
 
-    private fun logMessage(): String {
+    // Function for get line number of code
+    private fun lineNumber(): String {
         return Thread.currentThread().stackTrace[4].let {
             "${it.className.substringAfterLast(".")}.${it.methodName}(${it.fileName}:${it.lineNumber})"
         }
     }
 
-    fun d(){
-        Log.d(tag(), "${logMessage()}: SIMPLE DEBUG FOR MARK LINE OF CODE")
+    // Function Log Simple Debug without message params
+    override fun d(){
+        Log.d(tag(), "${lineNumber()}: $SIMPLE_MESSSAGE")
     }
 
-    fun d(msg: String?) {
-        Log.d(tag(), "${logMessage()}: $msg")
+    // Function Log Debug
+    override fun d(msg: String?) {
+        Log.d(tag(), "${lineNumber()}: $msg")
     }
 
-    fun v(msg: String?) {
-        Log.v(tag(), "${logMessage()}: $msg")
+    // Function Log Verbose
+    override fun v(msg: String?) {
+        Log.v(tag(), "${lineNumber()}: $msg")
     }
 
-    fun i(msg: String?) {
-        Log.i(tag(), "${logMessage()}: $msg")
+    // Function Log Info
+    override fun i(msg: String?) {
+        Log.i(tag(), "${lineNumber()}: $msg")
     }
 
-    fun w(msg: String?) {
-        Log.w(tag(), "${logMessage()}: $msg")
+    // Function Log Warn
+    override fun w(msg: String?) {
+        Log.w(tag(), "${lineNumber()}: $msg")
     }
 
-    fun w(e: Throwable?) {
-        Log.w(tag(), "${logMessage()}: ${e?.localizedMessage}")
+    // Function Log Warn
+    override fun w(e: Throwable?) {
+        Log.w(tag(), "${lineNumber()}: ${e?.localizedMessage}")
     }
 
-    fun w(e: Exception?) {
-        Log.w(tag(), "${logMessage()}: ${e?.localizedMessage}")
+    // Function Log Warn
+    override fun w(e: Exception?) {
+        Log.w(tag(), "${lineNumber()}: ${e?.localizedMessage}")
     }
 
-    fun e(msg: String?) {
-        Log.e(tag(), "${logMessage()}: $msg")
+    // Function Log Error
+    override fun e(msg: String?) {
+        Log.e(tag(), "${lineNumber()}: $msg")
     }
-
 
 }
