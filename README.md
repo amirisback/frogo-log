@@ -1,4 +1,4 @@
-# Frogo Log (work-in-progress 👷🔧️👷‍♀️⛏)
+![ScreenShoot Apps](docs/image/ss_banner.png?raw=true)
 
 # About This Project
 SDK for your Log problem to make easier developing android apps
