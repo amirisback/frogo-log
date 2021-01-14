@@ -5,7 +5,7 @@ SDK for your Log problem to make easier developing android apps
 frogo-log is under huge large development
 
 # Screenshoot Library Sample
-![ScreenShoot Apps](docs/image/ss_result_2.png?raw=true)
+![ScreenShoot Apps](docs/image/ss_result_1.png?raw=true)
 
 # Version Release
 This Is Latest Release
