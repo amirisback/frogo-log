@@ -11,7 +11,7 @@
 # Version Release
 This Is Latest Release
 
-    $version_release = 1.0.0
+    $version_release = 1.0.1
 
 What's New??
 
@@ -34,10 +34,11 @@ What's New??
 
     dependencies {
             // library frogo-log
-            implementation 'com.github.amirisback:frogo-log:1.0.0'
+            implementation 'com.github.amirisback:frogo-log:1.0.1'
 
 ### Step 3. Add the method of Frogo-Log
 
+#### FrogoLog (with line code)
     // Function Log Debug
     FrogoLog.d("Debug")
 
@@ -55,6 +56,27 @@ What's New??
 
     // Function Log Simple Debug without message params
     FrogoLog.d()
+
+
+#### FLog (without line code)
+
+    // Function Log Debug
+    FLog.d("Debug")
+
+    // Function Log Info
+    FLog.i("Info")
+
+    // Function Log Verbose
+    FLog.v("Verbose")
+
+    // Function Log Warn
+    FLog.w("Warn")
+
+    // Function Log Error
+    FLog.e("Error")
+
+    // Function Log Simple Debug without message params
+    FLog.d()
 
 ### Result
 ![ScreenShoot Apps](docs/image/ss_result_2.png?raw=true)
