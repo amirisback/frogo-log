@@ -15,7 +15,7 @@ This Is Latest Release
 
 What's New??
 
-    * New Release *
+    * add: FLog method *
 
 # Download this project
 
