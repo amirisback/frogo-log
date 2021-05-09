@@ -3,7 +3,9 @@
 # About This Project
 [![JitPack](https://jitpack.io/v/amirisback/frogo-log.svg?style=flat-square)](https://jitpack.io/#amirisback/frogo-log)
 - SDK for your Log problem to make easier developing android apps
-- frogo-log is under huge large development
+- frogo-log is Long Term Service
+- Line number show
+- Toast for easy develop and debug
 
 # Screenshoot Library Sample
 ![ScreenShoot Apps](docs/image/ss_result_1.png?raw=true)
@@ -11,11 +13,15 @@
 # Version Release
 This Is Latest Release
 
-    $version_release = 1.0.1
+    $version_release = 2.0.0
 
 What's New??
 
-    * add: FLog method *
+    * add: Toast Method *
+    * Bug Fixing *
+    * Enhance Performance *
+    * Refactoring Code *
+    * Long Term Service *
 
 # Download this project
 
@@ -34,7 +40,7 @@ What's New??
 
     dependencies {
             // library frogo-log
-            implementation 'com.github.amirisback:frogo-log:1.0.1'
+            implementation 'com.github.amirisback:frogo-log:2.0.0'
 
 ### Step 3. Add the method of Frogo-Log
 
@@ -57,6 +63,24 @@ What's New??
     // Function Log Simple Debug without message params
     FrogoLog.d()
 
+#### FrogoLog (with line code and Toast
+    // Function Log Debug (adding context params)
+    FrogoLog.d("Debug", this@MainActivity)
+
+    // Function Log Info (adding context params)
+    FrogoLog.i("Info", this@MainActivity)
+
+    // Function Log Verbose
+    FrogoLog.v("Verbose", this@MainActivity)
+
+    // Function Log Warn (adding context params)
+    FrogoLog.w("Warn", this@MainActivity)
+
+    // Function Log Error (adding context params)
+    FrogoLog.e("Error", this@MainActivity)
+
+    // Function Log Simple Debug without message params
+    FrogoLog.d(this@MainActivity)
 
 #### FLog (without line code)
 
@@ -78,34 +102,28 @@ What's New??
     // Function Log Simple Debug without message params
     FLog.d()
 
-### Result
-![ScreenShoot Apps](docs/image/ss_result_2.png?raw=true)
+#### Flog (without line code with toast)
 
-### List method of Frogo-Log Lib
+    // Function Log Debug (adding context params)
+    FLog.d("Debug", this@MainActivity)
 
-    // Function Log Simple Debug without message params
-    fun d()
-
-    // Function Log Debug
-    fun d(msg: String?)
+    // Function Log Info (adding context params)
+    FLog.i("Info", this@MainActivity)
 
     // Function Log Verbose
-    fun v(msg: String?)
+    FLog.v("Verbose", this@MainActivity)
 
-    // Function Log Info
-    fun i(msg: String?)
+    // Function Log Warn (adding context params)
+    FLog.w("Warn", this@MainActivity)
 
-    // Function Log Warn
-    fun w(msg: String?)
+    // Function Log Error (adding context params)
+    FLog.e("Error", this@MainActivity)
 
-    // Function Log Warn
-    fun w(e: Throwable?)
+    // Function Log Simple Debug without message params
+    FLog.d(this@MainActivity)
 
-    // Function Log Warn
-    fun w(e: Exception?)
-
-    // Function Log Error
-    fun e(msg: String?)
+### Result
+![ScreenShoot Apps](docs/image/ss_result_2.png?raw=true)
 
 ### Sample code
 For sample code you can see at [This](https://github.com/amirisback/frogo-log/blob/master/app/src/main/java/com/frogobox/logcat/MainActivity.kt)
