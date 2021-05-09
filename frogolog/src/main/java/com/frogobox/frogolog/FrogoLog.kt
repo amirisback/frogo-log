@@ -1,6 +1,8 @@
 package com.frogobox.frogolog
 
+import android.content.Context
 import android.util.Log
+import android.widget.Toast
 
 /*
  * Created by Faisal Amir on 14/01/2021
@@ -69,6 +71,56 @@ object FrogoLog : IFrogoLog {
     // Function Log Error
     override fun e(msg: String?) {
         Log.e(tag(), "${lineNumber()}: $msg")
+    }
+
+    // ---------------------------------------------------------------------------------------------
+
+    // Function Log Simple Debug without message params
+    override fun d(context: Context) {
+        Log.d(tag(), SIMPLE_MESSSAGE)
+        Toast.makeText(context, SIMPLE_MESSSAGE, Toast.LENGTH_LONG).show()
+    }
+
+    // Function Log Debug
+    override fun d(msg: String?, context: Context) {
+        Log.d(tag(), "${lineNumber()}: $msg")
+        Toast.makeText(context, "${lineNumber()}: $msg", Toast.LENGTH_LONG).show()
+    }
+
+    // Function Log Verbose
+    override fun v(msg: String?, context: Context) {
+        Log.v(tag(), "${lineNumber()}: $msg")
+        Toast.makeText(context, "${lineNumber()}: $msg", Toast.LENGTH_LONG).show()
+    }
+
+    // Function Log Info
+    override fun i(msg: String?, context: Context) {
+        Log.i(tag(), "${lineNumber()}: $msg")
+        Toast.makeText(context, "${lineNumber()}: $msg", Toast.LENGTH_LONG).show()
+    }
+
+    // Function Log Warn
+    override fun w(msg: String?, context: Context) {
+        Log.w(tag(), "${lineNumber()}: $msg")
+        Toast.makeText(context, "${lineNumber()}: $msg", Toast.LENGTH_LONG).show()
+    }
+
+    // Function Log Warn
+    override fun w(e: Exception?, context: Context) {
+        Log.w(tag(), "${lineNumber()}: ${e?.localizedMessage}")
+        Toast.makeText(context, "${lineNumber()}: ${e?.localizedMessage}", Toast.LENGTH_LONG).show()
+    }
+
+    // Function Log Warn
+    override fun w(e: Throwable?, context: Context) {
+        Log.w(tag(), "${lineNumber()}: ${e?.localizedMessage}")
+        Toast.makeText(context, "${lineNumber()}: ${e?.localizedMessage}", Toast.LENGTH_LONG).show()
+    }
+
+    // Function Log Error
+    override fun e(msg: String?, context: Context) {
+        Log.e(tag(), "${lineNumber()}: $msg")
+        Toast.makeText(context, "${lineNumber()}: $msg", Toast.LENGTH_LONG).show()
     }
 
 }

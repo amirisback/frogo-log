@@ -1,5 +1,7 @@
 package com.frogobox.frogolog
 
+import android.content.Context
+
 /*
  * Created by Faisal Amir on 14/02/2021
  * LogCat Source Code
@@ -17,25 +19,49 @@ interface IFLog {
     // Function Log Simple Debug without message params
     fun d()
 
+    // Function Log Simple Debug without message params with Toast
+    fun d(context: Context)
+
     // Function Log Debug
     fun d(msg: String?)
+
+    // Function Log Debug with Toast
+    fun d(msg: String?, context: Context)
 
     // Function Log Verbose
     fun v(msg: String?)
 
+    // Function Log Verbose with Toast
+    fun v(msg: String?, context: Context)
+
     // Function Log Info
     fun i(msg: String?)
+
+    // Function Log Info with Toast
+    fun i(msg: String?, context: Context)
 
     // Function Log Warn
     fun w(msg: String?)
 
+    // Function Log Warn with Toast
+    fun w(msg: String?, context: Context)
+
     // Function Log Warn
     fun w(e: Throwable?)
+
+    // Function Log Warn with Toast
+    fun w(e: Throwable?, context: Context)
 
     // Function Log Warn
     fun w(e: Exception?)
 
+    // Function Log Warn with Toast
+    fun w(e: Exception?, context: Context)
+
     // Function Log Error
     fun e(msg: String?)
+
+    // Function Log Error with Toast
+    fun e(msg: String?, context: Context)
 
 }
