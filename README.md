@@ -13,11 +13,11 @@
 ## Version Release
 This Is Latest Release
 
-    $version_release = 2.0.0
+    $version_release = 2.0.1
 
 What's New??
 
-    * add: Toast Method *
+    * Update Build Gradle Version *
     * Bug Fixing *
     * Enhance Performance *
     * Refactoring Code *
@@ -40,7 +40,7 @@ What's New??
 
     dependencies {
             // library frogo-log
-            implementation 'com.github.amirisback:frogo-log:2.0.0'
+            implementation 'com.github.amirisback:frogo-log:2.0.1'
 
 ### Step 3. Add the method of Frogo-Log
 
