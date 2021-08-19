@@ -11,8 +11,8 @@ android {
     defaultConfig {
         minSdk projectMinSdk
         targetSdk projectTargetSdk
-        versionCode projectVersionCode
-        versionName projectVersionName
+
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -26,7 +26,7 @@ android {
     }
 
     buildFeatures {
-        viewBinding = true
+        viewBinding true
     }
 
     compileOptions {
@@ -56,7 +56,7 @@ afterEvaluate {
                 from components.release
 
                 // Library Package Name
-                groupId = "$projectApplicationId"
+                groupId = "$projectLibraryId"
 
                 // Github Repository Name
                 artifactId = "$nameAPK"

@@ -1,8 +1,10 @@
-package com.frogobox.frogolog
+package com.frogobox.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.frogobox.frogolog.databinding.ActivityMainBinding
+import com.frogobox.app.databinding.ActivityMainBinding
+import com.frogobox.frogolog.FLog
+import com.frogobox.frogolog.FrogoLog
 
 class MainActivity : AppCompatActivity() {
 

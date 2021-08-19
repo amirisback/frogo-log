@@ -13,7 +13,7 @@
 ## Version Release
 This Is Latest Release
 
-    $version_release = 2.0.3
+    $version_release = 2.0.4
 
 What's New??
 
@@ -40,7 +40,7 @@ What's New??
 
     dependencies {
             // library frogo-log
-            implementation 'com.github.amirisback:frogo-log:2.0.3'
+            implementation 'com.github.amirisback:frogo-log:2.0.4'
 
 ### Step 3. Add the method of Frogo-Log
 
