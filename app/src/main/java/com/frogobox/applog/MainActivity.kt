@@ -1,8 +1,8 @@
-package com.frogobox.app
+package com.frogobox.applog
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.frogobox.app.databinding.ActivityMainBinding
+import com.frogobox.applog.databinding.ActivityMainBinding
 import com.frogobox.frogolog.FLog
 import com.frogobox.frogolog.FrogoLog
 

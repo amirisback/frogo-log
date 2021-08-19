@@ -1,4 +1,4 @@
-package com.frogobox.app
+package com.frogobox.applog
 
 import org.junit.Test
 

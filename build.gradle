@@ -8,7 +8,7 @@ buildscript {
 
         def appDomain = "com"
         def appDevConsole = "frogobox"
-        def appName = "app"
+        def appName = "applog"
         def library = "frogolog"
 
         def versionMajor = 2
