@@ -5,45 +5,12 @@ plugins {
 
 android {
 
-    def versionMajor = 2
-    def versionMinor = 0
-    def versionPatch = 2
-
-    def appDomain = "com"
-    def appDevConsole = "frogobox"
-    def appName = "logcat"
-
-    def projectApplicationId = "$appDomain.$appDevConsole.$appName"
-    def projectVersionCode = (versionMajor * 100) + (versionMinor * 10) + (versionPatch * 1)
-    def projectVersionName = "$versionMajor.$versionMinor.$versionPatch"
-
-    // Declaration app name
-    def nameApp = "Frogo Log"
-    def nameAppLower = nameApp.toLowerCase()
-
-    // Declaration apk / aab name
-    def nameAPK = nameAppLower.replace(" ", "-")
-
-    buildFeatures {
-        viewBinding = true
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdk projectCompileSdk
 
     defaultConfig {
         applicationId projectApplicationId
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdk projectMinSdk
+        targetSdk projectTargetSdk
         versionCode projectVersionCode
         versionName projectVersionName
 
@@ -60,6 +27,19 @@ android {
         }
     }
 
+    buildFeatures {
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+
 }
 
 static def gitCurrentBranch() {
@@ -74,15 +54,15 @@ static def gitCurrentBranch() {
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.5.0'
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
 
     // Library FrogoLog
     implementation project(':frogolog')
 
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }

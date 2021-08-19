@@ -1,19 +1,17 @@
-package com.frogobox.logcat
+package com.frogobox.frogolog
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import com.frogobox.frogolog.FLog
-import com.frogobox.frogolog.FrogoLog
-import com.frogobox.logcat.databinding.ActivityMainBinding
+import com.frogobox.frogolog.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private val binding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
         binding.apply {
