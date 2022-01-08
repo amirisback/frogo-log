@@ -1,6 +1,8 @@
 ![ScreenShoot Apps](docs/image/ss_banner.png?raw=true)
 
 ## About This Project
+
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-frogo--log-brightgreen.svg?style=flat-square)](https://android-arsenal.com/details/1/8314)
 [![JitPack](https://jitpack.io/v/amirisback/frogo-log.svg?style=flat-square)](https://jitpack.io/#amirisback/frogo-log)
 - SDK for your Log problem to make easier developing android apps
 - frogo-log is Long Term Service
@@ -13,7 +15,7 @@
 ## Version Release
 This Is Latest Release
 
-    $version_release = 2.0.4
+    $version_release = 2.0.5
 
 What's New??
 
@@ -27,100 +29,132 @@ What's New??
 
 ### Step 1. Add the JitPack repository to your build file (build.gradle : Project)
 
-    Add it in your root build.gradle at the end of repositories:
+#### <Option 1> Groovy Gradle
 
-    	allprojects {
-    		repositories {
-    			...
-    			maven { url 'https://jitpack.io' }
-    		}
-    	}
+    // Add it in your root build.gradle at the end of repositories:
+
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+
+#### <Option 2> Kotlin DSL Gradle
+
+```kotlin
+// Add it in your root build.gradle.kts at the end of repositories:
+
+allprojects {
+    repositories {
+        ...
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
 
 ### Step 2. Add the dependency (build.gradle : Module)
 
+#### <Option 1> Groovy Gradle
+
     dependencies {
-            // library frogo-log
-            implementation 'com.github.amirisback:frogo-log:2.0.4'
+        // library frogo-log
+        implementation 'com.github.amirisback:frogo-log:2.0.5'
+    }
+
+#### <Option 2> Kotlin DSL Gradle
+
+    dependencies {
+        // library frogo-log
+        implementation("com.github.amirisback:frogo-log:2.0.5")
+    }
 
 ### Step 3. Add the method of Frogo-Log
 
 #### FrogoLog (with line code)
-    // Function Log Debug
-    FrogoLog.d("Debug")
+```kotlin
+// Function Log Debug
+FrogoLog.d("Debug")
 
-    // Function Log Info
-    FrogoLog.i("Info")
+// Function Log Info
+FrogoLog.i("Info")
 
-    // Function Log Verbose
-    FrogoLog.v("Verbose")
+// Function Log Verbose
+FrogoLog.v("Verbose")
 
-    // Function Log Warn
-    FrogoLog.w("Warn")
+// Function Log Warn
+FrogoLog.w("Warn")
 
-    // Function Log Error
-    FrogoLog.e("Error")
+// Function Log Error
+FrogoLog.e("Error")
 
-    // Function Log Simple Debug without message params
-    FrogoLog.d()
+// Function Log Simple Debug without message params
+FrogoLog.d()
 
+```
 #### FrogoLog (with line code and Toast
-    // Function Log Debug (adding context params)
-    FrogoLog.d("Debug", this@MainActivity)
+```kotlin
+// Function Log Debug (adding context params)
+FrogoLog.d("Debug", this@MainActivity)
 
-    // Function Log Info (adding context params)
-    FrogoLog.i("Info", this@MainActivity)
+// Function Log Info (adding context params)
+FrogoLog.i("Info", this@MainActivity)
 
-    // Function Log Verbose
-    FrogoLog.v("Verbose", this@MainActivity)
+// Function Log Verbose
+FrogoLog.v("Verbose", this@MainActivity)
 
-    // Function Log Warn (adding context params)
-    FrogoLog.w("Warn", this@MainActivity)
+// Function Log Warn (adding context params)
+FrogoLog.w("Warn", this@MainActivity)
 
-    // Function Log Error (adding context params)
-    FrogoLog.e("Error", this@MainActivity)
+// Function Log Error (adding context params)
+FrogoLog.e("Error", this@MainActivity)
 
-    // Function Log Simple Debug without message params
-    FrogoLog.d(this@MainActivity)
+// Function Log Simple Debug without message params
+FrogoLog.d(this@MainActivity)
+```
 
 #### FLog (without line code)
 
-    // Function Log Debug
-    FLog.d("Debug")
+```kotlin
+// Function Log Debug
+FLog.d("Debug")
 
-    // Function Log Info
-    FLog.i("Info")
+// Function Log Info
+FLog.i("Info")
 
-    // Function Log Verbose
-    FLog.v("Verbose")
+// Function Log Verbose
+FLog.v("Verbose")
 
-    // Function Log Warn
-    FLog.w("Warn")
+// Function Log Warn
+FLog.w("Warn")
 
-    // Function Log Error
-    FLog.e("Error")
+// Function Log Error
+FLog.e("Error")
 
-    // Function Log Simple Debug without message params
-    FLog.d()
+// Function Log Simple Debug without message params
+FLog.d()
+```
 
 #### Flog (without line code with toast)
+```kotlin
+// Function Log Debug (adding context params)
+FLog.d("Debug", this@MainActivity)
 
-    // Function Log Debug (adding context params)
-    FLog.d("Debug", this@MainActivity)
+// Function Log Info (adding context params)
+FLog.i("Info", this@MainActivity)
 
-    // Function Log Info (adding context params)
-    FLog.i("Info", this@MainActivity)
+// Function Log Verbose
+FLog.v("Verbose", this@MainActivity)
 
-    // Function Log Verbose
-    FLog.v("Verbose", this@MainActivity)
+// Function Log Warn (adding context params)
+FLog.w("Warn", this@MainActivity)
 
-    // Function Log Warn (adding context params)
-    FLog.w("Warn", this@MainActivity)
+// Function Log Error (adding context params)
+FLog.e("Error", this@MainActivity)
 
-    // Function Log Error (adding context params)
-    FLog.e("Error", this@MainActivity)
-
-    // Function Log Simple Debug without message params
-    FLog.d(this@MainActivity)
+// Function Log Simple Debug without message params
+FLog.d(this@MainActivity)
+```
 
 ### Result
 ![ScreenShoot Apps](docs/image/ss_result_2.png?raw=true)
