@@ -15,7 +15,7 @@
 ## Version Release
 This Is Latest Release
 
-    $version_release = 2.0.5
+    $version_release = 2.0.6
 
 What's New??
 
@@ -24,6 +24,7 @@ What's New??
     * Enhance Performance *
     * Refactoring Code *
     * Long Term Service *
+    * Update build.gradle.kts latest update *
 
 ## Download this project
 
@@ -59,14 +60,14 @@ allprojects {
 
     dependencies {
         // library frogo-log
-        implementation 'com.github.amirisback:frogo-log:2.0.5'
+        implementation 'com.github.amirisback:frogo-log:2.0.6'
     }
 
 #### <Option 2> Kotlin DSL Gradle
 
     dependencies {
         // library frogo-log
-        implementation("com.github.amirisback:frogo-log:2.0.5")
+        implementation("com.github.amirisback:frogo-log:2.0.6")
     }
 
 ### Step 3. Add the method of Frogo-Log
