@@ -1,4 +1,4 @@
-name: Generate APK / AAB Debug And Release
+name: Generate APK Debug
 
 on:
   # Triggers the workflow on push or pull request events but only for default and protected branches
