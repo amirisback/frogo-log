@@ -5,7 +5,9 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-frogo--log-brightgreen.svg?style=flat-square)](https://android-arsenal.com/details/1/8314)
 [![JitPack](https://jitpack.io/v/amirisback/frogo-log.svg?style=flat-square)](https://jitpack.io/#amirisback/frogo-log)
 [![Scan with Detekt](https://github.com/amirisback/frogo-log/actions/workflows/detekt-analysis.yml/badge.svg?style=flat-square)](https://github.com/amirisback/frogo-log/actions/workflows/detekt-analysis.yml)
-[![Generate APK Debug](https://github.com/amirisback/frogo-log/actions/workflows/generate-apk-debug.yml/badge.svg?style=flat-square)](https://github.com/amirisback/frogo-log/actions/workflows/generate-apk-debug.yml)
+[![Generate APK / AAB](https://github.com/amirisback/frogo-log/actions/workflows/generate-apk-aab.yml/badge.svg)](https://github.com/amirisback/frogo-log/actions/workflows/generate-apk-aab.yml)
+- Privacy Policy [Click Here](https://github.com/amirisback/frogo-log/blob/master/PRIVACY-POLICY.md)
+- LICENSE [Click Here](https://github.com/amirisback/frogo-log/blob/master/LICENSE)
 - SDK for your Log problem to make easier developing android apps
 - frogo-log is Long Term Service
 - Line number show
