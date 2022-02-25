@@ -23,6 +23,19 @@ android {
         // Naming APK // AAB
         setProperty("archivesBaseName", "${ProjectSetting.NAME_APK}(${versionName})")
 
+        // Inject app name for debug
+        resValue("string", "app_name", ProjectSetting.NAME_APP)
+
+        // Inject admob id for debug
+        resValue("string", "admob_publisher_id", AdmobValue.debugAdmobPublisherId)
+        resValue("string", "admob_banner", AdmobValue.debugAdmobBanner)
+        resValue("string", "admob_interstitial", AdmobValue.debugAdmobInterstitial)
+        resValue("string", "admob_interstitial_video", AdmobValue.debugAdmobInterstitialVideo)
+        resValue("string", "admob_rewarded", AdmobValue.debugAdmobRewarded)
+        resValue("string", "admob_rewarded_interstitial", AdmobValue.debugAdmobRewardedInterstitial)
+        resValue("string", "admob_native_advanced", AdmobValue.debugAdmobNativeAdvanced)
+        resValue("string", "admob_native_advanced_video", AdmobValue.debugAdmobNativeAdvancedVideo)
+
     }
 
     signingConfigs {
@@ -43,6 +56,19 @@ android {
 
             // Generated Signed APK / AAB
             signingConfig = signingConfigs.getByName("release")
+
+            // Inject app name for release
+            resValue("string", "app_name", ProjectSetting.NAME_APP)
+
+            // Inject admob id for release
+            resValue("string", "admob_publisher_id", AdmobValue.releaseAdmobPublisherId)
+            resValue("string", "admob_banner", AdmobValue.releaseAdmobBanner)
+            resValue("string", "admob_interstitial", AdmobValue.releaseAdmobInterstitial)
+            resValue("string", "admob_interstitial_video", AdmobValue.releaseAdmobInterstitialVideo)
+            resValue("string", "admob_rewarded", AdmobValue.releaseAdmobRewarded)
+            resValue("string", "admob_rewarded_interstitial", AdmobValue.releaseAdmobRewardedInterstitial)
+            resValue("string", "admob_native_advanced", AdmobValue.releaseAdmobNativeAdvanced)
+            resValue("string", "admob_native_advanced_video", AdmobValue.releaseAdmobNativeAdvancedVideo)
 
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

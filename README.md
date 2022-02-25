@@ -11,13 +11,29 @@
 - Line number show
 - Toast for easy develop and debug
 
+## Screenshoot Result
+<table>
+    <tr>
+        <th>SS 1</th>
+        <th>SS 2</th>
+        <th>SS 3</th>
+        <th>SS 4</th>
+    </tr>
+    <tr>
+        <td><img width="200px" height="360px" src="docs/image/ss-1.png"></td>
+        <td><img width="200px" height="360px" src="docs/image/ss-2.png"></td>
+        <td><img width="200px" height="360px" src="docs/image/ss-3.png"></td>
+        <td><img width="200px" height="360px" src="docs/image/ss-4.png"></td>
+    </tr>
+<table>
+
 ## Screenshoot Library Sample
 ![ScreenShoot Apps](docs/image/ss_result_1.png?raw=true)
 
 ## Version Release
 This Is Latest Release
 
-    $version_release = 2.0.7
+    $version_release = 2.0.8
 
 What's New??
 
@@ -62,14 +78,14 @@ allprojects {
 
     dependencies {
         // library frogo-log
-        implementation 'com.github.amirisback:frogo-log:2.0.7'
+        implementation 'com.github.amirisback:frogo-log:2.0.8'
     }
 
 #### <Option 2> Kotlin DSL Gradle
 
     dependencies {
         // library frogo-log
-        implementation("com.github.amirisback:frogo-log:2.0.7")
+        implementation("com.github.amirisback:frogo-log:2.0.8")
     }
 
 ### Step 3. Add the method of Frogo-Log
