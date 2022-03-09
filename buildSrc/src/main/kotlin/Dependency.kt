@@ -13,8 +13,6 @@
 
 object Dependency {
 
-    // dependencies version
-    const val KOTLIN_VERSION = "1.6.10"
-    const val COMPOSE_VERSION = "1.0.2"
+    const val KOTLIN_VERSION = Version.JetBrains.kotlin
 
 }
